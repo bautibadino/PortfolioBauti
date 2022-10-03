@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;600;700&display=swap');
+header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-family: 'Bebas Neue';
+    align-items: center;
+    overflow: hidden;
+}
+
+header nav div{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    
+}
+
+.contenedor-links .link{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #1f3f69;
+    z-index: 99;
+    filter:contrast(120%)
+}
+.contenedor-links .link:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: .5px;
+    bottom: 0;
+    left: 0;
+    background-color: #fdfdfd;
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
+}
+
+.contenedor-links .link:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.contenedor-escritura{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 12vw;
+    height: 100px;
+    font-size: 32px;
+    background-color: transparent;
+    /* rotate: 20deg; */
+    position: absolute;
+    left: 7vw;
+}
+
+.logo p{
+    color: white;
+    /* rotate: -20deg; */
+}
+.contenedor-seccion1{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-family: 'Roboto Mono';
+}
+.contenedor-pequeno{
+    width: 30vw;
+    height: 100vh;
+    background-color: #1f3f69;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    box-shadow: 2px 6px 80px 16px rgba(0,0,0,0.37) inset;
+    -webkit-box-shadow: 2px 6px 80px 16px rgba(0,0,0,0.37) inset;
+    -moz-box-shadow: 2px 6px 80px 16px rgba(0,0,0,0.37) inset;
+    overflow: hidden;
+}
+.contenedor-pequeno img{
+    height: 100vh;
+    object-fit: cover;
+    filter: opacity(8%);
+}
+.contenedor-foto{
+    width: 70vw;
+    height: 100vh;
+    z-index: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: rgb(31,63,105);
+    background: linear-gradient(90deg, rgba(31,63,105,1) 0%, rgba(251,251,251,0.6265099789915967) 100%);
+}
+.contenedor-foto img{
+    width: 70vw;
+    height: 100vh;
+    z-index: -99;
+    object-fit: cover;
+    filter: opacity(65%);
+}
+
+.contenedor-escritura{
+    position: absolute;
+    top: 50%;
+    left: 7vw;
+    font-family: 'Roboto Mono';
+    color: white;
+}  
+
+.contenedor-escritura .parrafo{
+    font-size: 24px;
+    font-weight: 300;
+    height: 30px;
+
+}
+
+.contenedor-escritura .nombre{
+    height: 100px;
+    width: 450px;
+    background-color: rgba(251,251,251,0.2);
+    box-shadow: 8px 10px 5px 0px rgba(0, 0, 0, 0.338);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombre h2{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+/* FIN DE LA PRIMERA SECCION */
+
+.segunda-seccion{
+    font-family: 'Bebas Neue';
+
+}
+.segunda-seccion .contenedor{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto Mono';
+    font-weight: 200;
+    position: absolute;
+    overflow: hidden;
+    align-items: center;
+}
+
+.segunda-seccion .contenedor div{
+    width: 50vw;
+    height: 100vh;
+
+}
+
+.segunda-seccion .contenedor div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+
+}
+.segunda-seccion .contenedor div img{
+    width: 65%;
+    height: 65%;
+    box-shadow: 65px 98px 20px -29px rgba(31,63,105,1);
+    -webkit-box-shadow: 65px 98px 20px -29px rgba(31,63,105,1);
+    -moz-box-shadow: 65px 98px 20px -29px rgba(31,63,105,1);
+    border-radius: 8px;
+}
+
+.segunda-seccion .contenedor div p{
+    width: 400px;
+    text-align: justify;
+    font-size: 16px;
+    box-shadow: 143px 115px 58px 3px rgba(71,71,71,0);
+    -webkit-box-shadow: 143px 115px 58px 3px rgba(71,71,71,0);
+    -moz-box-shadow: 143px 115px 58px 3px rgba(71,71,71,0); 
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+}
+
+.contenedor-derecha{
+    height: 100vh;
+    width: 50vw;
+}
