@@ -2,7 +2,7 @@
 const h2 = document.querySelector('.nombre h2')
 const parrafo = document.querySelector('.parrafo');
 
-const maquinaEscribir = (text = '', tiempo = 200, etiqueta = '' ) => {
+const maquinaEscribir = (text = '', tiempo = 300, etiqueta = '' ) => {
     let arrayCaracteres = text.split('')
     etiqueta.innerHTML = ''; 
     console.log(arrayCaracteres);
@@ -19,7 +19,7 @@ const maquinaEscribir = (text = '', tiempo = 200, etiqueta = '' ) => {
 maquinaEscribir('HOLA, ME LLAMO:', 200 , parrafo)
 
 
-const maquinaEscribir2 = (text = '', tiempo = 200 , etiqueta='') =>{
+const maquinaEscribir2 = (text = '', tiempo = 300 , etiqueta='') =>{
     let arregloCaracteres = text.split('');
     etiqueta.innerHTML= '';
 
@@ -33,4 +33,4 @@ const maquinaEscribir2 = (text = '', tiempo = 200 , etiqueta='') =>{
     }, tiempo);
 }
 
-maquinaEscribir2('BAUTISTA BADINO DAVICO',  200 , h2)
+maquinaEscribir2('BAUTISTA BADINO DAVICO',  150 , h2)

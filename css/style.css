@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;600;700&display=swap');
-header{
+
+header {
     height: 60px;
     display: flex;
     align-items: center;
@@ -10,7 +11,7 @@ header{
     left: 0px;
 }
 
-header nav{
+header nav {
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -19,23 +20,24 @@ header nav{
     overflow: hidden;
 }
 
-header nav div{
+header nav div {
     width: 400px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 30px;
-    
+
 }
 
-.contenedor-links .link{
+.contenedor-links .link {
     font-size: 1.5em;
     text-decoration: none;
     color: #1f3f69;
     z-index: 99;
-    filter:contrast(120%)
+    filter: contrast(120%)
 }
-.contenedor-links .link:after{
+
+.contenedor-links .link:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -48,11 +50,12 @@ header nav div{
     transition: transform 0.6s ease-out;
 }
 
-.contenedor-links .link:hover:after{
+.contenedor-links .link:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-.contenedor-escritura{
+
+.contenedor-escritura {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -61,7 +64,7 @@ header nav div{
     align-items: center;
 }
 
-.logo{
+.logo {
     width: 12vw;
     height: 100px;
     font-size: 32px;
@@ -71,18 +74,20 @@ header nav div{
     left: 7vw;
 }
 
-.logo p{
+.logo p {
     color: white;
     /* rotate: -20deg; */
 }
-.contenedor-seccion1{
+
+.contenedor-seccion1 {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 30% 70%;
     font-family: 'Roboto Mono';
 }
-.contenedor-pequeno{
+
+.contenedor-pequeno {
     width: 30vw;
     height: 100vh;
     background-color: #1f3f69;
@@ -90,17 +95,19 @@ header nav div{
     top: 0px;
     left: 0px;
     z-index: -1;
-    box-shadow: 2px 6px 80px 16px rgba(0,0,0,0.37) inset;
-    -webkit-box-shadow: 2px 6px 80px 16px rgba(0,0,0,0.37) inset;
-    -moz-box-shadow: 2px 6px 80px 16px rgba(0,0,0,0.37) inset;
+    box-shadow: 2px 6px 80px 16px rgba(0, 0, 0, 0.37) inset;
+    -webkit-box-shadow: 2px 6px 80px 16px rgba(0, 0, 0, 0.37) inset;
+    -moz-box-shadow: 2px 6px 80px 16px rgba(0, 0, 0, 0.37) inset;
     overflow: hidden;
 }
-.contenedor-pequeno img{
+
+.contenedor-pequeno img {
     height: 100vh;
     object-fit: cover;
     filter: opacity(8%);
 }
-.contenedor-foto{
+
+.contenedor-foto {
     width: 70vw;
     height: 100vh;
     z-index: 0;
@@ -109,10 +116,11 @@ header nav div{
     position: absolute;
     top: 0px;
     right: 0px;
-    background: rgb(31,63,105);
-    background: linear-gradient(90deg, rgba(31,63,105,1) 0%, rgba(251,251,251,0.6265099789915967) 100%);
+    background: rgb(31, 63, 105);
+    background: linear-gradient(90deg, rgba(31, 63, 105, 1) 0%, rgba(251, 251, 251, 0.6265099789915967) 100%);
 }
-.contenedor-foto img{
+
+.contenedor-foto img {
     width: 70vw;
     height: 100vh;
     z-index: -99;
@@ -120,96 +128,127 @@ header nav div{
     filter: opacity(65%);
 }
 
-.contenedor-escritura{
+.contenedor-escritura {
     position: absolute;
     top: 50%;
     left: 7vw;
     font-family: 'Roboto Mono';
     color: white;
-}  
+}
 
-.contenedor-escritura .parrafo{
+.contenedor-escritura .parrafo {
     font-size: 24px;
     font-weight: 300;
     height: 30px;
 
 }
 
-.contenedor-escritura .nombre{
+.contenedor-escritura .nombre {
     height: 100px;
     width: 450px;
-    background-color: rgba(251,251,251,0.2);
+    background-color: rgba(251, 251, 251, 0.2);
     box-shadow: 8px 10px 5px 0px rgba(0, 0, 0, 0.338);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.nombre h2{
+.nombre h2 {
     font-weight: 400;
     font-size: 30px;
 }
 
 /* FIN DE LA PRIMERA SECCION */
+/* FIN DE LA PRIMERA SECCION */
+/* FIN DE LA PRIMERA SECCION */
+/* FIN DE LA PRIMERA SECCION */
+/* FIN DE LA PRIMERA SECCION */
+/* FIN DE LA PRIMERA SECCION */
+/* FIN DE LA PRIMERA SECCION */
 
-.segunda-seccion{
+.segunda-seccion {
     font-family: 'Bebas Neue';
 
 }
-.segunda-seccion .contenedor{
+
+.segunda-seccion .contenedor {
     height: 100vh;
     width: 100vw;
     background-color: white;
     color: black;
-    display: flex;
-    flex-direction: row;
+    display: grid;
     font-family: 'Roboto Mono';
     font-weight: 200;
-    position: absolute;
+    grid-template-columns: 50%;
     overflow: hidden;
-    align-items: center;
 }
 
-.segunda-seccion .contenedor div{
+
+.segunda-seccion .contenedor .contenedor-izquierda {
+    position: absolute;
     width: 50vw;
-    height: 100vh;
-
-}
-
-.segunda-seccion .contenedor div {
     height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-
+    justify-content: center;
+    color: black;
 }
-.segunda-seccion .contenedor div img{
-    width: 65%;
-    height: 65%;
-    box-shadow: 65px 98px 20px -29px rgba(31,63,105,1);
-    -webkit-box-shadow: 65px 98px 20px -29px rgba(31,63,105,1);
-    -moz-box-shadow: 65px 98px 20px -29px rgba(31,63,105,1);
+
+.segunda-seccion .contenedor .contenedor-izquierda img {
+    width: 55%;
+    height: 45%;
+    box-shadow: 65px 98px 20px -29px rgba(31, 63, 105, 1);
+    -webkit-box-shadow: 65px 98px 20px -29px rgba(31, 63, 105, 1);
+    -moz-box-shadow: 65px 98px 20px -29px rgba(31, 63, 105, 1);
     border-radius: 8px;
 }
 
-.segunda-seccion .contenedor div p{
-    width: 400px;
-    text-align: justify;
-    font-size: 16px;
-    box-shadow: 143px 115px 58px 3px rgba(71,71,71,0);
-    -webkit-box-shadow: 143px 115px 58px 3px rgba(71,71,71,0);
-    -moz-box-shadow: 143px 115px 58px 3px rgba(71,71,71,0); 
-    font-weight: 300;
-    color: rgb(0, 0, 0);
+
+.segunda-seccion .contenedor .contenedor-izquierda .skills {
+    display: grid;
+    height: auto;
+    width: auto;
+    justify-items: center;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    object-fit: contain;
+
 }
 
-.contenedor-derecha{
-    height: 100vh;
-    width: 50vw;
+.segunda-seccion .contenedor .contenedor-izquierda .skills img {
+    object-fit: scale-down;
 }
-.segunda-seccion .contenedor-derecha div{
+
+
+.segunda-seccion .contenedor .contenedor-izquierda p {
+    width: 400px;
+    color: #777b97;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 143px 115px 58px 3px rgba(71, 71, 71, 0);
+    -webkit-box-shadow: 143px 115px 58px 3px rgba(71, 71, 71, 0);
+    -moz-box-shadow: 143px 115px 58px 3px rgba(71, 71, 71, 0);
+    font-weight: 400;
+    /* color: rgb(0, 0, 0); */
+}
+
+
+
+.segunda-seccion .contenedor .contenedor-derecha {
+    height: 100%;
+    width: 50vw;
+    grid-column-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.segunda-seccion .contenedor .contenedor-derecha div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 400px;
     width: 400px;
     background-color: transparent;
@@ -217,16 +256,54 @@ header nav div{
     border-bottom: .5px double rgba(128, 128, 128, 0.504);
 }
 
-.titulo-seccion2{
+.segunda-seccion .contenedor .contenedor-derecha div p {
+    color: black;
+    text-align: justify;
+}
+
+.titulo-seccion2 {
     width: 150px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #1f3f69;
-    box-shadow: -48px 28px 36px 14px rgba(53,78,102,0.6);
-    -webkit-box-shadow: -48px 28px 36px 14px rgba(53,78,102,0.6);
-    -moz-box-shadow: -48px 28px 36px 14px rgba(53,78,102,0.6);
+    box-shadow: -48px 3px 36px 14px rgba(53, 78, 102, 0.21);
+    -webkit-box-shadow: -48px 3px 36px 14px rgba(53, 78, 102, 0.21);
+    -moz-box-shadow: -48px 3px 36px 14px rgba(53, 78, 102, 0.21);
     background: rgba(31, 63, 105, 0.419);
-    background: linear-gradient(90deg, rgba(31, 63, 105, 0.385) 0%, rgba(251, 251, 251, 0.302) 100%);
+    background: linear-gradient(90deg, rgba(31, 63, 105, 0.25) 0%, rgba(251, 251, 251, 0.102) 100%);
+}
+
+
+/* FIN DE LA SEGUNDA SECCION */
+/* FIN DE LA SEGUNDA SECCION */
+/* FIN DE LA SEGUNDA SECCION */
+/* FIN DE LA SEGUNDA SECCION */
+/* FIN DE LA SEGUNDA SECCION */
+/* FIN DE LA SEGUNDA SECCION */
+/* FIN DE LA SEGUNDA SECCION */
+/* FIN DE LA SEGUNDA SECCION */
+
+
+
+                            /* TARJETAS */
+.proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+}
+.contenedor-cards{
+    display: flex;
+    flex-direction: row;
+}
+.proyecto{
+    width: 22vw;
+    height: 20vh;
+}
+
+.proyecto a img{
+    width: 20vw
 }
