@@ -79,6 +79,10 @@ header nav div {
     /* rotate: -20deg; */
 }
 
+main {
+    width: 100vw;
+}
+
 .contenedor-seccion1 {
     width: 100vw;
     height: 100vh;
@@ -88,7 +92,7 @@ header nav div {
 }
 
 .contenedor-pequeno {
-    width: 30vw;
+    width: 30%;
     height: 100vh;
     background-color: #1f3f69;
     position: absolute;
@@ -103,6 +107,7 @@ header nav div {
 
 .contenedor-pequeno img {
     height: 100vh;
+    width: 100vw;
     object-fit: cover;
     filter: opacity(8%);
 }
@@ -287,23 +292,77 @@ header nav div {
 
 
 
-                            /* TARJETAS */
-.proyectos{
+/* TARJETAS */
+.seccion-proyectos {
+    font-family: 'Roboto Mono';
+    font-size: medium;
+    font-weight: lighter;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    width: 100vw;
+    justify-content: center;
     align-items: center;
-    height: 60vh;
-}
-.contenedor-cards{
-    display: flex;
-    flex-direction: row;
-}
-.proyecto{
-    width: 22vw;
-    height: 20vh;
+    box-shadow: 5px 3px 18px 0px rgba(0, 0, 0, 0.19); /* sombras */          
+    -webkit-box-shadow: 5px 3px 18px 0px rgba(0, 0, 0, 0.203);/* sombras */
+    -moz-box-shadow: 5px 3px 18px 0px rgba(0, 0, 0, 0.154);/* sombras */
+    background: rgb(31, 63, 105);/* background */
+    background: linear-gradient(90deg, rgba(31, 63, 105, 0.51) 0%, rgba(251, 251, 251, 0.2572566526610644) 95%);/* background */
+    height: 50vh;
+    overflow: hidden;
+    color: #1f3f69;
+    filter: brightness(120%);
 }
 
-.proyecto a img{
-    width: 20vw
+.seccion-proyectos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.seccion-proyectos .rejilla {
+    position: absolute;
+    z-index: -99;
+    width: 1400px;
+    height: 50vh;
+    object-fit: cover;
+    filter: blur(3px);
+}
+
+.proyectos{
+    display: grid;
+    grid-template-columns: 30% 2.5% 30% 2.5% 30%;
+    grid-template-rows: 90% 10%;
+    align-content: center;
+    justify-content: center;
+}
+
+.proyectos .proyecto{
+    display: flex;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.proyectos .proyecto img{
+    border-radius: 15px;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.51);
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.51);
+    filter: brightness(30%);
+}   
+.proyectos .proyecto .banner-texto{
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

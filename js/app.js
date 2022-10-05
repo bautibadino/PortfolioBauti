@@ -2,6 +2,8 @@
 const h2 = document.querySelector('.nombre h2')
 const parrafo = document.querySelector('.parrafo');
 
+
+
 const maquinaEscribir = (text = '', tiempo = 300, etiqueta = '' ) => {
     let arrayCaracteres = text.split('')
     etiqueta.innerHTML = ''; 
@@ -34,3 +36,15 @@ const maquinaEscribir2 = (text = '', tiempo = 300 , etiqueta='') =>{
 }
 
 maquinaEscribir2('BAUTISTA BADINO DAVICO',  150 , h2)
+
+// FIN REDACTAR NOMBRE LETRA POR LETRA
+// FIN REDACTAR NOMBRE LETRA POR LETRA
+// FIN REDACTAR NOMBRE LETRA POR LETRA
+
+const seccionesHeader = document.querySelector('.link')
+
+
+EventListeners()
+function EventListeners(){
+    
+}   
