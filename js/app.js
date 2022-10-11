@@ -42,10 +42,10 @@ maquinaEscribir2('BAUTISTA BADINO DAVICO', 150, h2)
 // FIN REDACTAR NOMBRE LETRA POR LETRA
 
 
-//CAMBIAR COLOR A LINKS HEADER//
-//CAMBIAR COLOR A LINKS HEADER//
-//CAMBIAR COLOR A LINKS HEADER//
-//CAMBIAR COLOR A LINKS HEADER//
+//CAMBIAR ESTILO A LINKS HEADER//
+//CAMBIAR ESTILO A LINKS HEADER//
+//CAMBIAR ESTILO A LINKS HEADER//
+//CAMBIAR ESTILO A LINKS HEADER//
 
 const linkInicio = document.querySelector('#inicio')
 const linkSobreMi = document.querySelector('#sobre-mi')
@@ -53,35 +53,46 @@ const linkProyectos = document.querySelector('#proyectos')
 const linkContacto = document.querySelector('#contacto')
 
 
-linkProyectos.addEventListener('click', () =>{
-    console.log('clickeaste');
+
+
+
+document.addEventListener('DOMContentLoaded', () => {   //CUANDO CARGA EL DOM QUE INICIE CON LA CLASE LINK ACTIVO EN EL INICIO
+    linkInicio.classList.replace('link','link-activo');            
+
 })
 
 window.addEventListener('scroll', () => {
-    console.log(window.scrollY)
-    
-        if (window.scrollY === 0) {
-        
-        linkInicio.classList.add('link-activo')
-        linkSobreMi.classList.remove('link-activo')
-    } 
 
-    if (window.scrollY >= 450) {
 
-        linkInicio.classList.remove('link-activo')
-        linkSobreMi.classList.add('link-activo')
+    if (window.scrollY >= 350) {
 
+        linkSobreMi.classList.replace('link' , 'link-activo')
+        linkInicio.classList.replace('link-activo' , 'link')
     }
-
-    if (window.scrollY >= 900){
-        
-        linkSobreMi.classList.remove('link-activo')
-        linkProyectos.classList.add('link-activo')
-
-    } 
-    if(window.scrollY <= 900){
-
-        linkProyectos.classList.remove('link-activo')
-
+    if (window.scrollY <= 450) {
+        linkInicio.classList.replace( 'link' , 'link-activo')
+        linkSobreMi.classList.replace('link-activo', 'link')
+    }
+    if (window.scrollY >= 1150){
+        linkSobreMi.classList.replace('link-activo', 'link')
+        linkProyectos.classList.replace('link', 'link-activo')
+    }
+    if(window.scrollY <= 1149){
+        linkProyectos.classList.replace('link-activo', 'link')
     }
 })
+
+//BARRA DE SCROLLDISTANCE
+
+
+function animacionProgressBar(){
+    
+    const {scrollTop, scrollHeight} = document.documentElement;
+    const scrollPercent = `${scrollTop / (scrollHeight - window.innerHeight) * 100}%; `;
+
+    console.log(scrollPercent)
+    document.querySelector('.progressbar').style = 'width:' + scrollPercent;
+}
+
+document.addEventListener('scroll', animacionProgressBar)
+
