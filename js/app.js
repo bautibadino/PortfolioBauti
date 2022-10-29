@@ -57,7 +57,7 @@ const linkContacto = document.querySelector('#contacto')
 
 
 document.addEventListener('DOMContentLoaded', () => {   //CUANDO CARGA EL DOM QUE INICIE CON LA CLASE LINK ACTIVO EN EL INICIO
-    linkInicio.classList.replace('link','link-activo');            
+    linkInicio.classList.replace('link', 'link-activo');
 
 })
 
@@ -66,18 +66,18 @@ window.addEventListener('scroll', () => {
 
     if (window.scrollY >= 350) {
 
-        linkSobreMi.classList.replace('link' , 'link-activo')
-        linkInicio.classList.replace('link-activo' , 'link')
+        linkSobreMi.classList.replace('link', 'link-activo')
+        linkInicio.classList.replace('link-activo', 'link')
     }
     if (window.scrollY <= 450) {
-        linkInicio.classList.replace( 'link' , 'link-activo')
+        linkInicio.classList.replace('link', 'link-activo')
         linkSobreMi.classList.replace('link-activo', 'link')
     }
-    if (window.scrollY >= 1150){
+    if (window.scrollY >= 1150) {
         linkSobreMi.classList.replace('link-activo', 'link')
         linkProyectos.classList.replace('link', 'link-activo')
     }
-    if(window.scrollY <= 1149){
+    if (window.scrollY <= 1149) {
         linkProyectos.classList.replace('link-activo', 'link')
     }
 })
@@ -85,14 +85,50 @@ window.addEventListener('scroll', () => {
 //BARRA DE SCROLLDISTANCE
 
 
-function animacionProgressBar(){
-    
-    const {scrollTop, scrollHeight} = document.documentElement;
+function animacionProgressBar() {
+
+    const { scrollTop, scrollHeight } = document.documentElement;
     const scrollPercent = `${scrollTop / (scrollHeight - window.innerHeight) * 100}%; `;
 
-    console.log(scrollPercent)
+
     document.querySelector('.progressbar').style = 'width:' + scrollPercent;
 }
 
 document.addEventListener('scroll', animacionProgressBar)
+
+
+window.addEventListener('scroll', () => {
+
+    const proyectoPrimero = document.querySelector('#proyecto-uno')
+
+    const proyectoSegundo = document.querySelector('#proyecto-dos')
+
+    const proyectoTercero = document.querySelector('#proyecto-tres')
+
+    if (window.scrollY > 1300) {
+
+        proyectoPrimero.className = 'proyecto-activo' + ' proyecto';
+
+    }else{
+        proyectoPrimero.className = 'proyecto';
+    } 
+
+    if (window.scrollY > 1700) {
+        proyectoSegundo.className = 'proyecto-activo' + ' proyecto';
+    } else{
+        proyectoSegundo.className = 'proyecto';
+    } 
+
+    if (window.scrollY > 1880) {
+
+        proyectoTercero.className = 'proyecto-activo' + ' proyecto';
+
+    } else{
+        proyectoTercero.className = 'proyecto';
+    } 
+    console.log(window.scrollY);
+
+})
+
+
 

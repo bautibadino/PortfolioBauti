@@ -545,16 +545,35 @@ header nav div {
 }
 
 .proyectos {
-    display: flex;
+    display: grid;
     align-content: center;
-    justify-content: space-around;
-    flex-direction: row;
-
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
     height: auto;
-    width: 150%;
     position: relative;
 
 }
+
+.proyecto:nth-child(1){
+    grid-column-start: 1;
+    grid-row-start: 1;
+    transform: translateX(250%);
+
+}
+
+.proyecto:nth-child(2){
+    grid-column-start: 2;
+    grid-row-start: 2;
+    transform: translateX(-250%);
+
+}
+
+.proyecto:nth-child(3){
+    grid-column-start:1 ;
+    grid-row-start: 3;
+    transform:  translateY(250%);
+}
+
 
 .proyectos .proyecto {
     display: flex;
@@ -567,8 +586,28 @@ header nav div {
     justify-content: center;
     overflow: hidden;
     margin: 6% 0px;
-
+    /* transform: translateX(250%); */
 }
+
+
+
+.proyectos .proyecto-activo{
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    flex-direction: row;
+    height: 70%;
+    width: 45vw;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    overflow: hidden;
+    margin: 6% 0px;
+    transition: ease 1s;
+    transform: translateX(0%);
+}
+
+
 
 .proyectos .proyecto img {
     border-radius: 15px;
